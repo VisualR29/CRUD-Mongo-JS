@@ -53,7 +53,7 @@ Este proyecto es una aplicación web que permite realizar operaciones CRUD (Crea
 2. Accede a la carpeta del proyecto:
 
 ```bash
-cd crud-alumnos
+cd final_proyect
 ```
 
 3. Instala las dependencias del backend:
