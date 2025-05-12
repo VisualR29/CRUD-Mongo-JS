@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CRUD Alumnos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Registro de Alumnos</h1>
+    <form id="alumnoForm" class="form">
+      <input type="hidden" id="id" />
+      <div class="form-group">
+        <label>Nombre:</label>
+        <input type="text" id="nombre" placeholder="Nombre" required />
+      </div>
+      <div class="form-group">
+        <label>Apellido:</label>
+        <input type="text" id="apellido" placeholder="Apellido" required />
+      </div>
+      <div class="form-group">
+        <label>Teléfono:</label>
+        <input type="tel" id="telefono" placeholder="Teléfono" />
+      </div>
+      <div class="form-group">
+        <label>Correo Electrónico:</label>
+        <input type="email" id="email" placeholder="Correo electrónico" required />
+      </div>
+      <div class="form-actions">
+        <button type="submit" id="submitButton" class="btn btn-primary">Guardar</button>
+        <button type="button" id="cancelButton" class="btn btn-secondary" style="display: none;"
+          onclick="cancelEdit()">Cancelar</button>
+      </div>
+    </form>
+
+    <h2>Lista de Alumnos</h2>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar alumno por nombre..."
+        oninput="searchAlumno()" />
+    </div>
+
+    <div id="listaAlumnos" class="lista-alumnos"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
